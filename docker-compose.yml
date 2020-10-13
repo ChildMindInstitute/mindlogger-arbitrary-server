@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  database:
+    image: mongo:4-bionic
+    container_name: "mongodb"
+    hostname: mongodb    
+    ports:
+      - 27017:27017
+      - 27018:27018
+      - 27019:27019
+    volumes:
+      - "mongovolume:/data/db"
+      - "./mongo/mongod.conf:/etc/mongod.conf"
+      - "./mongo/mongodb.pem:/etc/mongod.pem"      
+    networks:
+      - mindlogger
+    environment:
+      MONGO_INITDB_DATABASE: mindlogger
+      MONGO_INITDB_ROOT_USERNAME: rootuser
+      MONGO_INITDB_ROOT_PASSWORD: rootpass
+    command: ["-f", "/etc/mongod.conf"]
+    
+     
+networks:
+  mindlogger:
+
+volumes:
+  mongovolume:
+     driver: local
