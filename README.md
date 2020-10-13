@@ -15,7 +15,7 @@ In order to run this container you'll need docker and docker-compose installed.
 * [Windows](https://docs.docker.com/windows/started)
 * [OS X](https://docs.docker.com/mac/started/)
 * [Linux](https://docs.docker.com/linux/started/)
-* [Docker Compose] (https://docs.docker.com/compose/install/)
+* [Docker Compose](https://docs.docker.com/compose/install/)
 
 
 ### Usage
@@ -41,10 +41,6 @@ docker run give.example.org/of/your/container:v0.2.1 bash
 ```
 
 #### Environment Variables
-
-     MONGO_INITDB_DATABASE: mindlogger
-      MONGO_INITDB_ROOT_USERNAME: rootuser
-      MONGO_INITDB_ROOT_PASSWORD: rootpass
 
 * `MONGO_INITDB_DATABASE` - Inital Database to be crated during first startup
 * `MONGO_INITDB_ROOT_USERNAME` - root username
