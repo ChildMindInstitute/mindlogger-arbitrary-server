@@ -23,7 +23,7 @@ In order to run this container you'll need docker and docker-compose installed.
 #### Getting Started
 
 Clone github repository 
-``shell
+```shell
 git clone https://github.com/ChildMindInstitute/mindlogger-arbitrary-server.git
 ```
 
