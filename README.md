@@ -37,6 +37,17 @@ Start the Mongodb docker container
 docker-compose up -d
 ```
 
+You will be able to login to Mongodb running locally on 0.0.0.0 using the
+mapped ports and the credentials specified in the docker-compose.yml
+
+### Ports
+
+Docker/docker-compose maps the following ports
+Local:InsideDocker
+27017:27017
+27018:27018
+27019:27019
+
 #### Environment Variables
 
 * `MONGO_INITDB_DATABASE` - Inital Database to be crated during first startup
@@ -52,6 +63,7 @@ docker-compose up -d
 * `./mongo/mongod.conf` - MongoDB Config File it gets mounted into the Mongo Volume at boot
 * `./mongo/mongod.pem` - MongoDB SSL Connection Generated Key
 * `./mongo/mongod.key` - MongoDB SSL Connection Generated Pem
+
 
 
 
