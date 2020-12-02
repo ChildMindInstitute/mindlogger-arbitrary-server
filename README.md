@@ -43,7 +43,7 @@ mapped ports and the credentials specified in the docker-compose.yml
 ### Ports
 
 Docker/docker-compose maps the following ports
-Local:InsideDocker
+- Local:InsideDocker
 - 27017:27017
 - 27018:27018
 - 27019:27019
