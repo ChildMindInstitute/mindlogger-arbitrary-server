@@ -1,4 +1,4 @@
-#  Mindlogger Mongo docker container
+#  MindLogger Mongo docker container
 
 SSL Enabled Mongo Server based on the official mongo 4 Image
 
