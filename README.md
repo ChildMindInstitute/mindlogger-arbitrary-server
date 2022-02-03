@@ -64,6 +64,11 @@ Docker/docker-compose maps the following ports
 * `./mongo/mongod.pem` - MongoDB SSL Connection Generated Key
 * `./mongo/mongod.key` - MongoDB SSL Connection Generated Pem
 
+#### Information you need to provide to MindLogger Team 
+* Your server environment variables including access information 
+* S3 bucket environmentr variables including access information
+* Email address of the account owner 
+
 
 
 
