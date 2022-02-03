@@ -4,7 +4,7 @@ SSL Enabled Mongo Server based on the official mongo 4 Image
 
 ## Getting Started
 
-These instructions will cover usage information and for the docker container 
+This repro is to send user's response data to your own server versus storing the data within MindLogger. These instructions will cover usage information and for the docker container 
 
 ### Prerequisities
 
