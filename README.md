@@ -69,6 +69,20 @@ Docker/docker-compose maps the following ports
 * S3 bucket environmentr variables including access information
 * Email address of the account owner 
 
+Below is an example of the fields we require: 
+
+Server IP: XX.XX.XXX.XXX
+MONGO_INITDB_DATABASE: XXXXXXX
+MONGO_INITDB_ROOT_USERNAME: XXXXXXX
+MONGO_INITDB_ROOT_PASSWORD: XXXXXXXX
+MONGODB_PORT: XXXXX-XXXXX are open
+DB Host URL: XXXXXXXXXXXXX
+MindLogger Owner email: XXXXXXXX@XXXXXX.XXX
+
+S3 Bucket
+ACCESS_KEY_ID: XXXXXXXXXXXXXXXXXXXXX
+SECRET_ACCESS_KEY: XXXXXXXXXXXXXXXXX
+Bucket name: XXXXXXXXXX
 
 
 
