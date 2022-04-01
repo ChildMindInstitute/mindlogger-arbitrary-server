@@ -91,7 +91,7 @@ Bucket name: XXXXXXXXXX
 #### Update MongoDB Credential
 Once docker container is created, you cannot change the mongodb credentials by simply updating environment variables. You would have to delete the volume(container) completely, update environment variables(username & password) in ``docker-compose.yml``, and rerun the container.
 
-Otherwise, please following instructions to update db password manually by adding a new user.
+Otherwise, please following instructions to update db credentials manually by adding a new user.
 
 ```shell
 docker exec -it mongodb bash
