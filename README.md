@@ -54,6 +54,8 @@ Docker/docker-compose maps the following ports
 * `MONGO_INITDB_ROOT_USERNAME` - root username
 * `MONGO_INITDB_ROOT_PASSWORD` - root username password
 
+If you do not want to use default credentials, we recommend you to update it in ``docker-compose.yml`` before running the container.
+
 #### Volumes
 
 * `mongovolume` - Docker Volume 
@@ -87,7 +89,7 @@ Bucket name: XXXXXXXXXX
 ```
 
 #### Update MongoDB Credential
-Once docker file created container (volume), you cannot change the mongodb credentials by simply updating environment variables. You would have to delete the volume(container) completely, update environment variables(username & password) in ``docker-compose.yml``, and rerun the container.
+Once docker container is created, you cannot change the mongodb credentials by simply updating environment variables. You would have to delete the volume(container) completely, update environment variables(username & password) in ``docker-compose.yml``, and rerun the container.
 
 Otherwise, please following instructions to update db password manually by adding a new user.
 
