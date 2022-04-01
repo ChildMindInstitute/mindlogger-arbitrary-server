@@ -40,7 +40,7 @@ docker-compose up -d
 You will be able to login to Mongodb running locally on 0.0.0.0 using the
 mapped ports and the credentials specified in the docker-compose.yml
 
-### Ports
+#### Ports
 
 Docker/docker-compose maps the following ports
 - Local:InsideDocker
@@ -71,11 +71,12 @@ Docker/docker-compose maps the following ports
 
 Below is an example of the fields we require: 
 
+```shell
 Server IP: XX.XX.XXX.XXX
 MONGO_INITDB_DATABASE: XXXXXXX
 MONGO_INITDB_ROOT_USERNAME: XXXXXXX
 MONGO_INITDB_ROOT_PASSWORD: XXXXXXXX
-MONGODB_PORT: XXXXX-XXXXX are open
+MONGODB_PORT: XXXXX are open
 DB Host URL: XXXXXXXXXXXXX
 MindLogger Owner email: XXXXXXXX@XXXXXX.XXX
 
@@ -83,6 +84,23 @@ S3 Bucket
 ACCESS_KEY_ID: XXXXXXXXXXXXXXXXXXXXX
 SECRET_ACCESS_KEY: XXXXXXXXXXXXXXXXX
 Bucket name: XXXXXXXXXX
+```
 
+#### Update MongoDB Credential
+Once docker file created container (volume), you cannot change the mongodb credentials by simply updating environment variables. You would have to delete the volume(container) completely, update environment variables(username & password) in ``docker-compose.yml``, and rerun the container.
 
+Otherwise, please following instructions to update db password manually by adding a new user.
 
+```shell
+docker exec -it mongodb bash
+```
+
+```shell
+mongo --username [username] --password [password]
+```
+
+```shell
+db.createUser({user: `[username]`, pwd: '[password]', roles: [{ role: 'readWrite', db:'[database]'}]})
+```
+
+Now you can access the database as a new user with new credentials.
