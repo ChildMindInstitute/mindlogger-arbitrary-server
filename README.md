@@ -75,7 +75,7 @@ The ``MONGO_INITDB_ROOT_USERNAME`` and ``MONGO_INITDB_ROOT_PASSWORD`` has to pre
 Once docker container is created, you cannot change the mongodb credentials by simply updating environment variables. You would have to delete the volume(container) completely, update environment variables(username & password) in ``docker-compose.yml``, and rerun the container.
 Refer [this document](https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes) to learn how to remove docker container.
 
-Otherwise, the only way is manually add a new user with new db credentials. (But this is not recommended)
+Otherwise, the only way is manually add a new user with new db credentials. But also make sure you remove old user credentails. (This is not recommended) 
 
 ```
 docker exec -it mongodb bash
