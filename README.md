@@ -25,7 +25,7 @@ git clone https://github.com/ChildMindInstitute/mindlogger-arbitrary-server.git
 
 #### 2. Update/Set admin configurations
 
-Mke sure you do not use default credentials - go to ``docker-compose.yml`` and update environment variables before running the container. You can't change it again once you run docker.
+Make sure you do not use default credentials - go to ``docker-compose.yml`` and update environment variables before running the container. You can't change it again once you run docker.
 #### Environment Variables
 
 * `MONGO_INITDB_DATABASE` - Inital Database to be crated during first startup
